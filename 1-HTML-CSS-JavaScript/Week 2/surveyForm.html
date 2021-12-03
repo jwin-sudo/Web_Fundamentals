@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="survey.css">
+  
+</head>
+<body>
+    <h1>Survey</h1>
+    <form class="survey-form" action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post"></form>
+    <fieldset>
+        <legend>Your Information</legend>
+        <div>
+            <label for="firstName"></label>
+            First Name <input type="text" id="firstName" name="firstName" placeholder="Your First Name"/>
+        </div>
+        <div>
+            <label for="lastName"></label>
+            Last Name <input type="text" id="lastName" name="lastName" placeholder="Your Last Name"/>
+        </div>
+        <div>
+            <label for="email"></label>
+            Your Email <input type="email" id="email" name="email" placeholder="Your Email Address" />
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Survey Questions</legend>
+            <div>
+                Favorite Sport
+                <label for="baseball"></label>
+                <input type="radio" name="sport" id="baseball" value="baseball"/> Baseball
+                
+                <label for="rugby"></label>
+                <input type="radio" name="sport" id="rugby" value="rugby"/> Rugby
+
+                <label for="snowboarding"></label>
+                <input type="radio" name="sport" id="snowboarding" value="snowboarding" /> Snowboarding
+            </div>
+            <div>
+                Your Pets
+                <label for="cat"></label>
+                <input type="checkbox" name="pets" id="cat" value="cat" /> Cat
+
+                <label for="dog"></label>
+                <input type="checkbox" name="pets" id="dog" value="dog" /> Dog
+
+                <label for="iguana"></label>
+                <input type="checkbox" name="pets" id="iguana" value="iguana"/> Iguana
+            </div>
+    </fieldset>
+    <input type="submit" id="submit-btn" style="background: green; color: white;"/>
+</body>
+</html>
